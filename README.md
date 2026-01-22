@@ -14,7 +14,7 @@ The system is split into independent layers, making it easy to extend or reuse i
   </p>
 </div>
 
-## 🏁 Getting Started
+## Getting Started
 
 ### 1️⃣ Clone the repository
 
@@ -43,6 +43,6 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
-## 👤 Author
+## Author
 
 Developed by AppRonin, Full-Stack Developer.
