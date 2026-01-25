@@ -1,4 +1,4 @@
-# 🎮🛒 E-commerce
+# 🛒 E-commerce
 
 A **reusable Django e-commerce platform** tailored for **game shops**, built to serve as a solid foundation for future stores and experiments.
 
