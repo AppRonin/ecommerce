@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Product
 
 # Create your views here.
@@ -16,4 +16,8 @@ def store(request, category_slug=None):
     return render(request, 'store/store.html', context)
 
 def product_detail(request, category_slug, product_slug):
-    return render(request, 'store/product-detail.html')
+    product = get_object_or_404(Product, category__slug=category_slug, slug=product_slug)
+    
+    context = {'product': product}
+
+    return render(request, 'store/product-detail.html', context)
