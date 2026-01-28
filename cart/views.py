@@ -6,10 +6,10 @@ from store.models import Product
 def _cart_id(request):
     """Create an unique id with session cookie"""
 
-    cart = request.session.session_key
+    cart_id = request.session.session_key
     if not cart:
-        cart = request.session.create()
-    return cart
+        cart_id = request.session.create()
+    return cart_id
 
 def add_cart(request, product_id):
     """Add products to cart"""
@@ -33,7 +33,7 @@ def add_cart(request, product_id):
         cart_item.save()
     return redirect('cart')
 
-def cart(request):
+def cart(request, total=0, quantity=0, cart_items=None):
     """Cart View, Renders page with cart data"""
 
     # Get cart, items, total and quantity data
